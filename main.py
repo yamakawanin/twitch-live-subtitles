@@ -26,7 +26,7 @@ BG_IMAGE_NAME = "farewall.jpg"
 
 def get_b64_image(image_path):
     if not os.path.exists(image_path):
-        print(f"⚠️ Warning: Background image '{image_path}' not found.")
+        print(f"Warning: Background image '{image_path}' not found.")
         return None
     with open(image_path, "rb") as f:
         data = base64.b64encode(f.read()).decode('utf-8')
@@ -376,7 +376,7 @@ class Engine:
     def __init__(self, fw_model_size: str, trans_model_name: str):
         self.device = "cuda" if torch.cuda.is_available() else "cpu"
         compute_type = "float16" if self.device == "cuda" else "int8"
-        print("🔥 Using device:", self.device, "| compute_type:", compute_type)
+        print("Using device:", self.device, "| compute_type:", compute_type)
 
         self.whisper = WhisperModel(
             fw_model_size,
