@@ -773,7 +773,7 @@ with demo:
         gr.HTML("""
         <div class="topbar">
           <div class="brand">
-            <div class="t">Twitch Live Intelligence</div>
+            <div class="t">Twitch Live Subtitles</div>
             <div class="s">Real-time Translation & Transcription</div>
           </div>
           <div class="status-badge">
